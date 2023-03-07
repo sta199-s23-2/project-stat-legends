@@ -22,6 +22,7 @@ library(tidyverse)
 
 -   Write a brief description of the observations.
 
+The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed percipitation. 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
@@ -42,8 +43,9 @@ library(tidyverse)
 
 ```{r}
 #| label: load-data-1
+weather_forecasts = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-12-20/weather_forecasts.csv')
 
-# add code here
+glimpse(weather_forecasts)
 ```
 
 # Data 2
