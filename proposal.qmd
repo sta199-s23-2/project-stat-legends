@@ -30,6 +30,7 @@ The dataset includes weather data for states and cities, based on specific dates
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state). 
 
 ## Literature
 
