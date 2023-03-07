@@ -30,6 +30,7 @@ The dataset includes weather data for states and cities, based on specific dates
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state). 
 
 ## Literature
 
@@ -53,8 +54,10 @@ glimpse(weather_forecasts)
 ## Introduction and data
 
 -   Identify the source of the data.
+The data comes from the National UFO Reporting Center and consists of 80,332 reported sightings of UFOs.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+It was has been collected for 
 
 -   Write a brief description of the observations.
 
@@ -62,15 +65,27 @@ glimpse(weather_forecasts)
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+How does the location of the UFO sighting affect both how the UFO is described by the reporter and the date of the sighting?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
+
+The research topic investigates the likelihood but 
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
+<<<<<<< HEAD
+There are both categorical and quantitative variables in the dataset. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. Some of the quantitative variables include the encounter length with the UFO and the latitude and longitude of the sighting.
+
+=======
+>>>>>>> 6b0d8a418909ea5c6ec7e50032128358293e5c79
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+https://www.sciencedirect.com/science/article/pii/S2590291121000206
+
 -   Provide a one paragraph summary about the article.
+This articles describes "presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture."
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
@@ -79,7 +94,9 @@ glimpse(weather_forecasts)
 ```{r}
 #| label: load-data-2
 
-# add code here
+ufo_sightings <- readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-25/ufo_sightings.csv")
+
+glimpse(ufo_sightings)
 ```
 
 # Data 3
