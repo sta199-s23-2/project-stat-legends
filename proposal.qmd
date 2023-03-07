@@ -1,6 +1,6 @@
 ---
-title: "Project title"
-subtitle: "Proposal"
+title: "Stat Legend Project Proposal"
+subtitle: "Julia, Zach, Hayden, Josh, & Ashka"
 format: html
 editor: visual
 ---
