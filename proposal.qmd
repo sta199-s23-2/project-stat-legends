@@ -16,9 +16,9 @@ library(tidyverse)
 
 ## Introduction and data
 
--   Identify the source of the data.
+-   Data comes from the USA National Weather Service
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+-   Starting at January 30th 2021, the USA National Weather Service made predictions in 12, 24, and 36 hour intervals for 160 cities across the nation and then observed that actual weather at the time.
 
 -   Write a brief description of the observations.
 
@@ -30,7 +30,7 @@ library(tidyverse)
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-## Literature 
+## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
@@ -64,7 +64,7 @@ library(tidyverse)
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-## Literature 
+## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
@@ -98,7 +98,7 @@ library(tidyverse)
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-## Literature 
+## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
