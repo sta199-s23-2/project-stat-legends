@@ -26,7 +26,7 @@ The dataset includes weather data for states and cities, based on specific dates
 
 -   How does the predicted forecast versus the observed forecast change depending on hours before the observation by state.
 
--   The data gives the temperature that is ovserved
+-   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and obseravtions are made in. 
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
