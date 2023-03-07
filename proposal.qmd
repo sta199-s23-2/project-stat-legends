@@ -22,19 +22,17 @@ library(tidyverse)
 
 -   Write a brief description of the observations.
 
-The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed percipitation. 
-## Research question
+The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed percipitation. \## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
--   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
+-   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and observations are made in.
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state). 
+Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state).
 
 ## Literature
 
@@ -57,13 +55,16 @@ glimpse(weather_forecasts)
 
 ## Introduction and data
 
--   Identify the source of the data.
+-   Identify the source of the data. 
+
 The data comes from the National UFO Reporting Center and consists of 80,332 reported sightings of UFOs.
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+-   State when and how it was originally collected (by the original data curator, not necessarily how you found the data). 
+
 It has been collected over 43 years by people reporting sightings of UFOs to this website until June 2019.
 
--   Write a brief description of the observations.
+-   Write a brief description of the observations. 
+
 The observations are each a different sighting of a UFO as reported by the user.
 
 ## Research question
@@ -74,7 +75,7 @@ How does the location of the UFO sighting affect both how the UFO is described b
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-The research topic investigates the difference in descriptions of UFOs based on the location and time of the sighting. We hypothesize that Western culture will have more sightings in recent years as compared to Eastern cultures. However, Eastern culture will have more consistent sightings with the sightings relating to religious phenomena.
+The research topic investigates the difference in descriptions of UFOs based on the location and time of the sighting. This research is important because it is important to understand the different cultural and regional perspectives on UFO sightings and beliefs. We hypothesize that Western culture will have more sightings in recent years as compared to Eastern cultures. However, Eastern culture will have more consistent sightings with the sightings relating to religious phenomena.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
@@ -86,12 +87,13 @@ There are both categorical and quantitative variables in the dataset. The catego
 
 https://www.sciencedirect.com/science/article/pii/S2590291121000206
 
--   Provide a one paragraph summary about the article.
-This articles describes "presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture." The article found that UFO questionaire that they created was well created and clearly investigates the difference between magical and rational explanations for UFOs.  
+-   Provide a one paragraph summary about the article. 
+
+This articles describes "presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture." The article found that UFO questionaire that they created was well created and clearly investigates the difference between magical and rational explanations for UFOs.
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
-Our research question relates the Spanish-speaking population to the location they are in currently and how the amount of sightings may differ across different Spanish-speaking populations. This builds on the research article because it also relates how the descriptions of the UFOs may differ, and how this may result to magic vs. rational explanations for UFOs.  
+Our research question relates the Spanish-speaking population to the location they are in currently and how the amount of sightings may differ across different Spanish-speaking populations. This builds on the research article because it also relates how the descriptions of the UFOs may differ, and how this may result to magic vs. rational explanations for UFOs.
 
 ## Glimpse of data
 
@@ -121,14 +123,11 @@ This question is important because you can analyze which fast food chains in the
 
 The three variables in this research question are restaurant (categorical), calories (quantitative), and cholesterol (quantitative).
 
-
 ## Literature
 
-Fast Food Pattern and Cardiometabolic Disorders: A Review of Current Studies
-https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4772793/
+Fast Food Pattern and Cardiometabolic Disorders: A Review of Current Studies https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4772793/
 
 The correlation between fast food consumption and subsequent health outcomes (including those like obesity and related heart conditions) is an urgent issue in the United States. It has been found that a fast food consumption poses a significant risk for poor diets featuring elevated calories and fats and limited nutrient, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. The findings of this article reinforce the need to analyze fast food consumption and its impact on the prevalence of these health outcomes across the country.
-
 
 Our research question responds to the findings of this article by posing a deeper analysis of these trends based on specific fast food chains. The results from our research question can be used to guide dietary recommendations to promote a healthier diet and decrease the risk of these negative health outcomes.
 
