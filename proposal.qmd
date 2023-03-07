@@ -22,12 +22,13 @@ library(tidyverse)
 
 -   Write a brief description of the observations.
 
-The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed percipitation. 
+The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed precipitation. Each observation is a specific date and time that includes the above variables.  
+
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
--   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
+-   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature changes depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
