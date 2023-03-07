@@ -22,6 +22,7 @@ library(tidyverse)
 
 -   Write a brief description of the observations.
 
+The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed percipitation. 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
@@ -42,8 +43,9 @@ library(tidyverse)
 
 ```{r}
 #| label: load-data-1
+weather_forecasts = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-12-20/weather_forecasts.csv')
 
-# add code here
+glimpse(weather_forecasts)
 ```
 
 # Data 2
@@ -70,8 +72,11 @@ The research topic investigates the likelihood but
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
+<<<<<<< HEAD
 There are both categorical and quantitative variables in the dataset. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. Some of the quantitative variables include the encounter length with the UFO and the latitude and longitude of the sighting.
 
+=======
+>>>>>>> 6b0d8a418909ea5c6ec7e50032128358293e5c79
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
