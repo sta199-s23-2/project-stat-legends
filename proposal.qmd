@@ -56,27 +56,25 @@ glimpse(weather_forecasts)
 The data comes from the National UFO Reporting Center and consists of 80,332 reported sightings of UFOs.
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
-It was has been collected for 
+It has been collected over 43 years by people reporting sightings of UFOs to this website until June 2019.
 
 -   Write a brief description of the observations.
+The observations are each a different sighting of a UFO as reported by the user.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-How does the location of the UFO sighting affect both how the UFO is described by the reporter and the date of the sighting?
+How does the location of the UFO sighting affect both how the UFO is described by the reporter, the date of the sighting, and the amount of sightings that exist in this location?
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-The research topic investigates the likelihood but 
+The research topic investigates the difference in descriptions of UFOs based on the location and time of the sighting. We hypothesize that Western culture will have more sightings in recent years as compared to Eastern cultures. However, Eastern culture will have more consistent sightings with the sightings relating to religious phenomena.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
-<<<<<<< HEAD
 There are both categorical and quantitative variables in the dataset. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. Some of the quantitative variables include the encounter length with the UFO and the latitude and longitude of the sighting.
 
-=======
->>>>>>> 6b0d8a418909ea5c6ec7e50032128358293e5c79
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
@@ -84,9 +82,11 @@ There are both categorical and quantitative variables in the dataset. The catego
 https://www.sciencedirect.com/science/article/pii/S2590291121000206
 
 -   Provide a one paragraph summary about the article.
-This articles describes "presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture."
+This articles describes "presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture." The article found that UFO questionaire that they created was well created and clearly investigates the difference between magical and rational explanations for UFOs.  
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+Our research question relates the Spanish-speaking population to the location they are in currently and how the amount of sightings may differ across different Spanish-speaking populations. This builds on the research article because it also relates how the descriptions of the UFOs may differ, and how this may result to magic vs. rational explanations for UFOs.  
 
 ## Glimpse of data
 
