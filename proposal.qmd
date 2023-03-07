@@ -27,9 +27,15 @@ The dataset includes weather data for states and cities, based on specific dates
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+<<<<<<< HEAD
+-   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and obseravtions are made in. 
+=======
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
+>>>>>>> 20bf8c468fb990d7ebc342c74cac2604f32cbec9
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state). 
 
 ## Literature
 
@@ -102,32 +108,37 @@ glimpse(ufo_sightings)
 
 ## Introduction and data
 
--   Identify the source of the data.
+The source of the data is fastfoodnutrition.com
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+The dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition website, but only collected data for entrees (rather than ALL food, sides, drinks, desserts, etc.) Additionally, they removed web-scraping guide at the request of the website owner.
 
--   Write a brief description of the observations.
+With entrees listed under item from 8 different restaurants, quantitative observations summarize the nutrition facts of these entrees with variables like calories, cholesterol, sodium, etc.
 
 ## Research question
 
--   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+What is the relationship between calories and cholesterol for entrees from prominent fast food chains in the United States?
 
--   A description of the research topic along with a concise statement of your hypotheses on this topic.
+This question is important because you can analyze which fast food chains in the United States are "healthier" in terms of calorie consumption and other nutrition details. The results of this topic can be used to create guidance for diets to prevent heart disease, obesity, and other dietary conditions that are prominent in the United States. We hypothesize that entrees from McDonalds will have the strongest, positive relationship between calories and cholesterol, indicating a greater risk for heart disease and obesity.
 
--   Identify the types of variables in your research question. Categorical? Quantitative?
+The three variables in this research question are restaurant (categorical), calories (quantitative), and cholesterol (quantitative).
+
 
 ## Literature
 
--   Find one published credible article on the topic you are interested in researching.
+Fast Food Pattern and Cardiometabolic Disorders: A Review of Current Studies
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4772793/
 
--   Provide a one paragraph summary about the article.
+The correlation between fast food consumption and subsequent health outcomes (including those like obesity and related heart conditions) is an urgent issue in the United States. It has been found that a fast food consumption poses a significant risk for poor diets featuring elevated calories and fats and limited nutrient, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. The findings of this article reinforce the need to analyze fast food consumption and its impact on the prevalence of these health outcomes across the country.
 
--   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+Our research question responds to the findings of this article by posing a deeper analysis of these trends based on specific fast food chains. The results from our research question can be used to guide dietary recommendations to promote a healthier diet and decrease the risk of these negative health outcomes.
 
 ## Glimpse of data
 
 ```{r}
 #| label: load-data-3
 
-# add code here
+fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+glimpse(fastfood_calories)
 ```
