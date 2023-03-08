@@ -28,7 +28,7 @@ The dataset includes weather data for states and cities, based on specific dates
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
--   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature changes depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
+-   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature change depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
@@ -41,9 +41,10 @@ Our research question contains three quantitative variables (predicted and actua
 -   Find one published credible article on the topic you are interested in researching.
 
 https://scijinks.gov/forecast-reliability/
+This is a reliable article from the National Oceanic and Atmospheric Administration of the US Department of Commerce. 
 
 -   Provide a one paragraph summary about the article.
-
+A five day forecast is right about 90 percent of the time, however a ten day forecast is only right about half of the time. Thus, there is a pretty large difference in forecast accuracy over this five day period. Forecasts are made by meteorologists, who use computers to create weather models. A lot of the data for these models comes from satalites. The atmosphere is everchanging, and these models are based on future assumptions, so the further into the future, the harder it is to predict. 
 
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
