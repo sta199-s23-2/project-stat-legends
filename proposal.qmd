@@ -44,7 +44,11 @@ https://scijinks.gov/forecast-reliability/
 
 -   Provide a one paragraph summary about the article.
 
+
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+This article deals with longer periods between the forecast and actual observation. Some are as long as 10 days in advance. Our dataset deals with forecasts that are much closer to the actual observed temperature, which may provide a different picture.  
 
 ## Glimpse of data
 
