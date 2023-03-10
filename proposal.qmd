@@ -17,8 +17,11 @@ library(tidyverse)
 ## Introduction and data
 
 -   Identify the source of the data.
+The source of the data is USA National Weather Service. 
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
+
+The USA national weather service gave predicted weather forecasts at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed for 167 cities across the nation. Data collection started January 30th 2021 and lasted 16 months. 
 
 -   Write a brief description of the observations.
 
@@ -28,13 +31,12 @@ The dataset includes weather data for states and cities, based on specific dates
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
-<<<<<<< HEAD
--   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temeprature observed. We will look at how the difference in predicted vs observed temperature changes depending on the amount of time between the forecast and the observed temperature. We will then look at how this difference fluctuates by the state the the forecasts and obseravtions are made in. 
-=======
--   The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature change depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
->>>>>>> dc38376b58a279ace83effca1cdd5cda433d1355
+
+The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature change depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in. 
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
+
+Our group wanted to look at weather forecasts and the factors taht effect the accuracy of those forecasts like time between prediction and observation and the location of the observation. This could help determine which regions have better weather forecasting capabilities and how time plays a role in this prediction. Our hypothesis is that the weather forecast accuracy will be positively correlated with a shorter time before the observation and that states away from the ocean and great lakes will have better accuracy of forecasts. 
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
