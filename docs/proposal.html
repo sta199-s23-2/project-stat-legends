@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project title</title>
+<title>Stat Legend Project Proposal</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -157,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -190,8 +195,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project title</h1>
-<p class="subtitle lead">Proposal</p>
+<h1 class="title">Stat Legend Project Proposal</h1>
+<p class="subtitle lead">Julia, Zach, Hayden, Josh, &amp; Ashka</p>
 </div>
 
 
@@ -207,49 +212,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.2.2</code></pre>
-</div>
 </div>
 <section id="data-1" class="level1">
 <h1>Data 1</h1>
 <section id="introduction-and-data" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
+<li><p>Identify the source of the data. The source of the data is USA National Weather Service.</p></li>
 <li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
 </ul>
+<p>The USA national weather service gave predicted weather forecasts at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed for 167 cities across the nation. Data collection started January 30th 2021 and lasted 16 months.</p>
+<ul>
+<li>Write a brief description of the observations.</li>
+</ul>
+<p>The dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed precipitation. Each observation is a specific date and time that includes the above variables.</p>
 </section>
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <ul>
 <li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
+</ul>
+<p>The data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature change depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in.</p>
+<ul>
 <li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+</ul>
+<p>Our group wanted to look at weather forecasts and the factors taht effect the accuracy of those forecasts like time between prediction and observation and the location of the observation. This could help determine which regions have better weather forecasting capabilities and how time plays a role in this prediction. Our hypothesis is that the weather forecast accuracy will be positively correlated with a shorter time before the observation and that states away from the ocean and great lakes will have better accuracy of forecasts.</p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p>Our research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state).</p>
 </section>
 <section id="literature" class="level2">
 <h2 class="anchored" data-anchor-id="literature">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
+<li>Find one published credible article on the topic you are interested in researching.</li>
+</ul>
+<p>https://scijinks.gov/forecast-reliability/ This is a reliable article from the National Oceanic and Atmospheric Administration of the US Department of Commerce.</p>
+<ul>
+<li><p>Provide a one paragraph summary about the article. A five day forecast is right about 90 percent of the time, however a ten day forecast is only right about half of the time. Thus, there is a pretty large difference in forecast accuracy over this five day period. Forecasts are made by meteorologists, who use computers to create weather models. A lot of the data for these models comes from satalites. The atmosphere is everchanging, and these models are based on future assumptions, so the further into the future, the harder it is to predict.</p></li>
 <li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
 </ul>
+<p>This article deals with longer periods between the forecast and actual observation. Some are as long as 10 days in advance. Our dataset deals with forecasts that are much closer to the actual observed temperature, which may provide a different picture.</p>
 </section>
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>weather_forecasts <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-12-20/weather_forecasts.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 651968 Columns: 10
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (5): city, state, high_or_low, forecast_outlook, possible_error
+dbl  (4): forecast_hours_before, observed_temp, forecast_temp, observed_precip
+date (1): date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(weather_forecasts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 651,968
+Columns: 10
+$ date                  &lt;date&gt; 2021-01-30, 2021-01-30, 2021-01-30, 2021-01-30,…
+$ city                  &lt;chr&gt; "ABILENE", "ABILENE", "ABILENE", "ABILENE", "ABI…
+$ state                 &lt;chr&gt; "TX", "TX", "TX", "TX", "TX", "TX", "TX", "TX", …
+$ high_or_low           &lt;chr&gt; "high", "high", "high", "high", "low", "low", "l…
+$ forecast_hours_before &lt;dbl&gt; 48, 36, 24, 12, 48, 36, 24, 12, 48, 36, 24, 12, …
+$ observed_temp         &lt;dbl&gt; 70, 70, 70, 70, 42, 42, 42, 42, 29, 29, 29, 29, …
+$ forecast_temp         &lt;dbl&gt; NA, NA, NA, 70, NA, NA, 39, 38, NA, NA, NA, 30, …
+$ observed_precip       &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, …
+$ forecast_outlook      &lt;chr&gt; NA, NA, NA, "DUST", NA, NA, "DUST", "SUNNY", NA,…
+$ possible_error        &lt;chr&gt; "none", "none", "none", "none", "none", "none", …</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -258,31 +292,78 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-1">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li>Identify the source of the data.</li>
 </ul>
+<p>The data comes from the National UFO Reporting Center and consists of 80,332 reported sightings of UFOs.</p>
+<ul>
+<li>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</li>
+</ul>
+<p>It has been collected over 43 years by people reporting sightings of UFOs to this website until June 2019.</p>
+<ul>
+<li>Write a brief description of the observations.</li>
+</ul>
+<p>The observations are each a different sighting of a UFO as reported by the user. There are both categorical and quantitative variables in the dataset. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. Some of the quantitative variables include the encounter length with the UFO and the latitude and longitude of the sighting.</p>
 </section>
 <section id="research-question-1" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-1">Research question</h2>
 <ul>
 <li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
+</ul>
+<p>How does the location of the UFO sighting affect both how the UFO is described by the reporter, the date of the sighting, and the amount of sightings that exist in this location?</p>
+<ul>
 <li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
+</ul>
+<p>The research topic investigates the difference in descriptions of UFOs based on the location and time of the sighting. This research is important because it is important to understand the different cultural and regional perspectives on UFO sightings and beliefs. We hypothesize that Western culture will have more sightings in recent years as compared to Eastern cultures. However, Eastern culture will have more consistent sightings with the sightings relating to religious phenomena.</p>
+<ul>
 <li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
 </ul>
+<p>There are both categorical and quantitative variables in the research question. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. The quantitative variable includes the number of sightings in each location.</p>
 </section>
 <section id="literature-1" class="level2">
 <h2 class="anchored" data-anchor-id="literature-1">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li>Find one published credible article on the topic you are interested in researching.</li>
 </ul>
+<p>https://www.sciencedirect.com/science/article/pii/S2590291121000206</p>
+<ul>
+<li>Provide a one paragraph summary about the article.</li>
+</ul>
+<p>This articles describes “presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture.” The article found that UFO questionaire that they created was well created and clearly investigates the difference between magical and rational explanations for UFOs.</p>
+<ul>
+<li>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</li>
+</ul>
+<p>Our research question relates the Spanish-speaking population to the location they are in currently and how the amount of sightings may differ across different Spanish-speaking populations. This builds on the research article because it also relates how the descriptions of the UFOs may differ, and how this may result to magic vs.&nbsp;rational explanations for UFOs.</p>
 </section>
 <section id="glimpse-of-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-1">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ufo_sightings <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-25/ufo_sightings.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 80332 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (8): date_time, city_area, state, country, ufo_shape, described_encounte...
+dbl (3): encounter_length, latitude, longitude
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(ufo_sightings)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 80,332
+Columns: 11
+$ date_time                  &lt;chr&gt; "10/10/1949 20:30", "10/10/1949 21:00", "10…
+$ city_area                  &lt;chr&gt; "san marcos", "lackland afb", "chester (uk/…
+$ state                      &lt;chr&gt; "tx", "tx", NA, "tx", "hi", "tn", NA, "ct",…
+$ country                    &lt;chr&gt; "us", NA, "gb", "us", "us", "us", "gb", "us…
+$ ufo_shape                  &lt;chr&gt; "cylinder", "light", "circle", "circle", "l…
+$ encounter_length           &lt;dbl&gt; 2700, 7200, 20, 20, 900, 300, 180, 1200, 18…
+$ described_encounter_length &lt;chr&gt; "45 minutes", "1-2 hrs", "20 seconds", "1/2…
+$ description                &lt;chr&gt; "This event took place in early fall around…
+$ date_documented            &lt;chr&gt; "4/27/2004", "12/16/2005", "1/21/2008", "1/…
+$ latitude                   &lt;dbl&gt; 29.88306, 29.38421, 53.20000, 28.97833, 21.…
+$ longitude                  &lt;dbl&gt; -97.941111, -98.581082, -2.916667, -96.6458…</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -290,32 +371,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Data 3</h1>
 <section id="introduction-and-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-2">Introduction and data</h2>
-<ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
-</ul>
+<p>The source of the data is fastfoodnutrition.com</p>
+<p>The dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition website, but only collected data for entrees (rather than ALL food, sides, drinks, desserts, etc.) Additionally, they removed web-scraping guide at the request of the website owner.</p>
+<p>With entrees listed under item from 8 different restaurants, quantitative observations summarize the nutrition facts of these entrees with variables like calories, cholesterol, sodium, etc.</p>
 </section>
 <section id="research-question-2" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-2">Research question</h2>
-<ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
-</ul>
+<p>What is the relationship between calories and cholesterol for entrees from prominent fast food chains in the United States?</p>
+<p>This question is important because you can analyze which fast food chains in the United States are “healthier” in terms of calorie consumption and other nutrition details. The results of this topic can be used to create guidance for diets to prevent heart disease, obesity, and other dietary conditions that are prominent in the United States. We hypothesize that entrees from McDonalds will have the strongest, positive relationship between calories and cholesterol, indicating a greater risk for heart disease and obesity.</p>
+<p>The three variables in this research question are restaurant (categorical), calories (quantitative), and cholesterol (quantitative).</p>
 </section>
 <section id="literature-2" class="level2">
 <h2 class="anchored" data-anchor-id="literature-2">Literature</h2>
-<ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
-</ul>
+<p>Fast Food Pattern and Cardiometabolic Disorders: A Review of Current Studies https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4772793/</p>
+<p>The correlation between fast food consumption and subsequent health outcomes (including those like obesity and related heart conditions) is an urgent issue in the United States. It has been found that a fast food consumption poses a significant risk for poor diets featuring elevated calories and fats and limited nutrient, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. The findings of this article reinforce the need to analyze fast food consumption and its impact on the prevalence of these health outcomes across the country.</p>
+<p>Our research question responds to the findings of this article by posing a deeper analysis of these trends based on specific fast food chains. The results from our research question can be used to guide dietary recommendations to promote a healthier diet and decrease the risk of these negative health outcomes.</p>
 </section>
 <section id="glimpse-of-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-2">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fastfood_calories <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+Rows: 515 Columns: 18
+── Column specification
+──────────────────────────────────────────────────────── Delimiter: "," chr
+(3): restaurant, item, salad dbl (15): ...1, calories, cal_fat, total_fat,
+sat_fat, trans_fat, cholestero...
+ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+Specify the column types or set `show_col_types = FALSE` to quiet this message.
+• `` -&gt; `...1`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(fastfood_calories)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 515
+Columns: 18
+$ ...1        &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…
+$ restaurant  &lt;chr&gt; "Mcdonalds", "Mcdonalds", "Mcdonalds", "Mcdonalds", "Mcdon…
+$ item        &lt;chr&gt; "Artisan Grilled Chicken Sandwich", "Single Bacon Smokehou…
+$ calories    &lt;dbl&gt; 380, 840, 1130, 750, 920, 540, 300, 510, 430, 770, 380, 62…
+$ cal_fat     &lt;dbl&gt; 60, 410, 600, 280, 410, 250, 100, 210, 190, 400, 170, 300,…
+$ total_fat   &lt;dbl&gt; 7, 45, 67, 31, 45, 28, 12, 24, 21, 45, 18, 34, 20, 34, 8, …
+$ sat_fat     &lt;dbl&gt; 2.0, 17.0, 27.0, 10.0, 12.0, 10.0, 5.0, 4.0, 11.0, 21.0, 4…
+$ trans_fat   &lt;dbl&gt; 0.0, 1.5, 3.0, 0.5, 0.5, 1.0, 0.5, 0.0, 1.0, 2.5, 0.0, 1.5…
+$ cholesterol &lt;dbl&gt; 95, 130, 220, 155, 120, 80, 40, 65, 85, 175, 40, 95, 125, …
+$ sodium      &lt;dbl&gt; 1110, 1580, 1920, 1940, 1980, 950, 680, 1040, 1040, 1290, …
+$ total_carb  &lt;dbl&gt; 44, 62, 63, 62, 81, 46, 33, 49, 35, 42, 38, 48, 48, 67, 31…
+$ fiber       &lt;dbl&gt; 3, 2, 3, 2, 4, 3, 2, 3, 2, 3, 2, 3, 3, 5, 2, 2, 3, 3, 5, 2…
+$ sugar       &lt;dbl&gt; 11, 18, 18, 18, 18, 9, 7, 6, 7, 10, 5, 11, 11, 11, 6, 3, 1…
+$ protein     &lt;dbl&gt; 37, 46, 70, 55, 46, 25, 15, 25, 25, 51, 15, 32, 42, 33, 13…
+$ vit_a       &lt;dbl&gt; 4, 6, 10, 6, 6, 10, 10, 0, 20, 20, 2, 10, 10, 10, 2, 4, 6,…
+$ vit_c       &lt;dbl&gt; 20, 20, 20, 25, 20, 2, 2, 4, 4, 6, 0, 10, 20, 15, 2, 6, 15…
+$ calcium     &lt;dbl&gt; 20, 20, 50, 20, 20, 15, 10, 2, 15, 20, 15, 35, 35, 35, 4, …
+$ salad       &lt;chr&gt; "Other", "Other", "Other", "Other", "Other", "Other", "Oth…</code></pre>
+</div>
 </div>
 
 
@@ -392,7 +501,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

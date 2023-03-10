@@ -16,93 +16,93 @@
   {
     "objectID": "proposal.html",
     "href": "proposal.html",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "",
-    "text": "library(tidyverse)\n\nWarning: package 'ggplot2' was built under R version 4.2.2\n\n\nWarning: package 'tidyr' was built under R version 4.2.2\n\n\nWarning: package 'readr' was built under R version 4.2.2\n\n\nWarning: package 'purrr' was built under R version 4.2.2"
+    "text": "library(tidyverse)"
   },
   {
     "objectID": "proposal.html#introduction-and-data",
     "href": "proposal.html#introduction-and-data",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data. The source of the data is USA National Weather Service.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\n\nThe USA national weather service gave predicted weather forecasts at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed for 167 cities across the nation. Data collection started January 30th 2021 and lasted 16 months.\n\nWrite a brief description of the observations.\n\nThe dataset includes weather data for states and cities, based on specific dates and times of observations. The dataset also provides information on predicted versus observed temperature, as well as predicted versus observed precipitation. Each observation is a specific date and time that includes the above variables."
   },
   {
     "objectID": "proposal.html#research-question",
     "href": "proposal.html#research-question",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\n\nThe data gives the temperature that is predicted at 12, 24 and 36 hours before the temperature was observed and then the actual temperature observed. We answer the question: how does the difference in predicted versus observed temperature change depending on the amount of time between the forecast and the observed temperature? We will then look at how this difference fluctuates by the state the the forecasts and observations are made in.\n\nA description of the research topic along with a concise statement of your hypotheses on this topic.\n\nOur group wanted to look at weather forecasts and the factors taht effect the accuracy of those forecasts like time between prediction and observation and the location of the observation. This could help determine which regions have better weather forecasting capabilities and how time plays a role in this prediction. Our hypothesis is that the weather forecast accuracy will be positively correlated with a shorter time before the observation and that states away from the ocean and great lakes will have better accuracy of forecasts.\n\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\nOur research question contains three quantitative variables (predicted and actual forecast, hours before observation), and one categorical variable (state)."
   },
   {
     "objectID": "proposal.html#literature",
     "href": "proposal.html#literature",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\n\nhttps://scijinks.gov/forecast-reliability/ This is a reliable article from the National Oceanic and Atmospheric Administration of the US Department of Commerce.\n\nProvide a one paragraph summary about the article. A five day forecast is right about 90 percent of the time, however a ten day forecast is only right about half of the time. Thus, there is a pretty large difference in forecast accuracy over this five day period. Forecasts are made by meteorologists, who use computers to create weather models. A lot of the data for these models comes from satalites. The atmosphere is everchanging, and these models are based on future assumptions, so the further into the future, the harder it is to predict.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited.\n\nThis article deals with longer periods between the forecast and actual observation. Some are as long as 10 days in advance. Our dataset deals with forecasts that are much closer to the actual observed temperature, which may provide a different picture."
   },
   {
     "objectID": "proposal.html#glimpse-of-data",
     "href": "proposal.html#glimpse-of-data",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nweather_forecasts = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-12-20/weather_forecasts.csv')\n\nRows: 651968 Columns: 10\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (5): city, state, high_or_low, forecast_outlook, possible_error\ndbl  (4): forecast_hours_before, observed_temp, forecast_temp, observed_precip\ndate (1): date\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(weather_forecasts)\n\nRows: 651,968\nColumns: 10\n$ date                  <date> 2021-01-30, 2021-01-30, 2021-01-30, 2021-01-30,…\n$ city                  <chr> \"ABILENE\", \"ABILENE\", \"ABILENE\", \"ABILENE\", \"ABI…\n$ state                 <chr> \"TX\", \"TX\", \"TX\", \"TX\", \"TX\", \"TX\", \"TX\", \"TX\", …\n$ high_or_low           <chr> \"high\", \"high\", \"high\", \"high\", \"low\", \"low\", \"l…\n$ forecast_hours_before <dbl> 48, 36, 24, 12, 48, 36, 24, 12, 48, 36, 24, 12, …\n$ observed_temp         <dbl> 70, 70, 70, 70, 42, 42, 42, 42, 29, 29, 29, 29, …\n$ forecast_temp         <dbl> NA, NA, NA, 70, NA, NA, 39, 38, NA, NA, NA, 30, …\n$ observed_precip       <dbl> 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, …\n$ forecast_outlook      <chr> NA, NA, NA, \"DUST\", NA, NA, \"DUST\", \"SUNNY\", NA,…\n$ possible_error        <chr> \"none\", \"none\", \"none\", \"none\", \"none\", \"none\", …"
   },
   {
     "objectID": "proposal.html#introduction-and-data-1",
     "href": "proposal.html#introduction-and-data-1",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\n\nIdentify the source of the data.\n\nThe data comes from the National UFO Reporting Center and consists of 80,332 reported sightings of UFOs.\n\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\n\nIt has been collected over 43 years by people reporting sightings of UFOs to this website until June 2019.\n\nWrite a brief description of the observations.\n\nThe observations are each a different sighting of a UFO as reported by the user. There are both categorical and quantitative variables in the dataset. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. Some of the quantitative variables include the encounter length with the UFO and the latitude and longitude of the sighting."
   },
   {
     "objectID": "proposal.html#research-question-1",
     "href": "proposal.html#research-question-1",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\n\nHow does the location of the UFO sighting affect both how the UFO is described by the reporter, the date of the sighting, and the amount of sightings that exist in this location?\n\nA description of the research topic along with a concise statement of your hypotheses on this topic.\n\nThe research topic investigates the difference in descriptions of UFOs based on the location and time of the sighting. This research is important because it is important to understand the different cultural and regional perspectives on UFO sightings and beliefs. We hypothesize that Western culture will have more sightings in recent years as compared to Eastern cultures. However, Eastern culture will have more consistent sightings with the sightings relating to religious phenomena.\n\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\nThere are both categorical and quantitative variables in the research question. The categorical variables include the location (city, state, and country) of the UFO sighting, as well as a description of the UFO. The quantitative variable includes the number of sightings in each location."
   },
   {
     "objectID": "proposal.html#literature-1",
     "href": "proposal.html#literature-1",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\n\nhttps://www.sciencedirect.com/science/article/pii/S2590291121000206\n\nProvide a one paragraph summary about the article.\n\nThis articles describes “presents a psychosocial study based on the statistical justification of the UFO Experiences Questionnaire (UFO-Q), which examines the underlying dimensions of UFO experiences and beliefs, as well as their social impact on the Spanish-speaking culture.” The article found that UFO questionaire that they created was well created and clearly investigates the difference between magical and rational explanations for UFOs.\n\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited.\n\nOur research question relates the Spanish-speaking population to the location they are in currently and how the amount of sightings may differ across different Spanish-speaking populations. This builds on the research article because it also relates how the descriptions of the UFOs may differ, and how this may result to magic vs. rational explanations for UFOs."
   },
   {
     "objectID": "proposal.html#glimpse-of-data-1",
     "href": "proposal.html#glimpse-of-data-1",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nufo_sightings <- readr::read_csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-06-25/ufo_sightings.csv\")\n\nRows: 80332 Columns: 11\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (8): date_time, city_area, state, country, ufo_shape, described_encounte...\ndbl (3): encounter_length, latitude, longitude\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nglimpse(ufo_sightings)\n\nRows: 80,332\nColumns: 11\n$ date_time                  <chr> \"10/10/1949 20:30\", \"10/10/1949 21:00\", \"10…\n$ city_area                  <chr> \"san marcos\", \"lackland afb\", \"chester (uk/…\n$ state                      <chr> \"tx\", \"tx\", NA, \"tx\", \"hi\", \"tn\", NA, \"ct\",…\n$ country                    <chr> \"us\", NA, \"gb\", \"us\", \"us\", \"us\", \"gb\", \"us…\n$ ufo_shape                  <chr> \"cylinder\", \"light\", \"circle\", \"circle\", \"l…\n$ encounter_length           <dbl> 2700, 7200, 20, 20, 900, 300, 180, 1200, 18…\n$ described_encounter_length <chr> \"45 minutes\", \"1-2 hrs\", \"20 seconds\", \"1/2…\n$ description                <chr> \"This event took place in early fall around…\n$ date_documented            <chr> \"4/27/2004\", \"12/16/2005\", \"1/21/2008\", \"1/…\n$ latitude                   <dbl> 29.88306, 29.38421, 53.20000, 28.97833, 21.…\n$ longitude                  <dbl> -97.941111, -98.581082, -2.916667, -96.6458…"
   },
   {
     "objectID": "proposal.html#introduction-and-data-2",
     "href": "proposal.html#introduction-and-data-2",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Introduction and data",
-    "text": "Introduction and data\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations."
+    "text": "Introduction and data\nThe source of the data is fastfoodnutrition.com\nThe dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition website, but only collected data for entrees (rather than ALL food, sides, drinks, desserts, etc.) Additionally, they removed web-scraping guide at the request of the website owner.\nWith entrees listed under item from 8 different restaurants, quantitative observations summarize the nutrition facts of these entrees with variables like calories, cholesterol, sodium, etc."
   },
   {
     "objectID": "proposal.html#research-question-2",
     "href": "proposal.html#research-question-2",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Research question",
-    "text": "Research question\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?"
+    "text": "Research question\nWhat is the relationship between calories and cholesterol for entrees from prominent fast food chains in the United States?\nThis question is important because you can analyze which fast food chains in the United States are “healthier” in terms of calorie consumption and other nutrition details. The results of this topic can be used to create guidance for diets to prevent heart disease, obesity, and other dietary conditions that are prominent in the United States. We hypothesize that entrees from McDonalds will have the strongest, positive relationship between calories and cholesterol, indicating a greater risk for heart disease and obesity.\nThe three variables in this research question are restaurant (categorical), calories (quantitative), and cholesterol (quantitative)."
   },
   {
     "objectID": "proposal.html#literature-2",
     "href": "proposal.html#literature-2",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Literature",
-    "text": "Literature\n\nFind one published credible article on the topic you are interested in researching.\nProvide a one paragraph summary about the article.\nIn 1-2 sentences, explain how your research question builds on / is different than the article you have cited."
+    "text": "Literature\nFast Food Pattern and Cardiometabolic Disorders: A Review of Current Studies https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4772793/\nThe correlation between fast food consumption and subsequent health outcomes (including those like obesity and related heart conditions) is an urgent issue in the United States. It has been found that a fast food consumption poses a significant risk for poor diets featuring elevated calories and fats and limited nutrient, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. The findings of this article reinforce the need to analyze fast food consumption and its impact on the prevalence of these health outcomes across the country.\nOur research question responds to the findings of this article by posing a deeper analysis of these trends based on specific fast food chains. The results from our research question can be used to guide dietary recommendations to promote a healthier diet and decrease the risk of these negative health outcomes."
   },
   {
     "objectID": "proposal.html#glimpse-of-data-2",
     "href": "proposal.html#glimpse-of-data-2",
-    "title": "Project title",
+    "title": "Stat Legend Project Proposal",
     "section": "Glimpse of data",
-    "text": "Glimpse of data\n\n# add code here"
+    "text": "Glimpse of data\n\nfastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')\n\nNew names:\nRows: 515 Columns: 18\n── Column specification\n──────────────────────────────────────────────────────── Delimiter: \",\" chr\n(3): restaurant, item, salad dbl (15): ...1, calories, cal_fat, total_fat,\nsat_fat, trans_fat, cholestero...\nℹ Use `spec()` to retrieve the full column specification for this data. ℹ\nSpecify the column types or set `show_col_types = FALSE` to quiet this message.\n• `` -> `...1`\n\nglimpse(fastfood_calories)\n\nRows: 515\nColumns: 18\n$ ...1        <dbl> 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17,…\n$ restaurant  <chr> \"Mcdonalds\", \"Mcdonalds\", \"Mcdonalds\", \"Mcdonalds\", \"Mcdon…\n$ item        <chr> \"Artisan Grilled Chicken Sandwich\", \"Single Bacon Smokehou…\n$ calories    <dbl> 380, 840, 1130, 750, 920, 540, 300, 510, 430, 770, 380, 62…\n$ cal_fat     <dbl> 60, 410, 600, 280, 410, 250, 100, 210, 190, 400, 170, 300,…\n$ total_fat   <dbl> 7, 45, 67, 31, 45, 28, 12, 24, 21, 45, 18, 34, 20, 34, 8, …\n$ sat_fat     <dbl> 2.0, 17.0, 27.0, 10.0, 12.0, 10.0, 5.0, 4.0, 11.0, 21.0, 4…\n$ trans_fat   <dbl> 0.0, 1.5, 3.0, 0.5, 0.5, 1.0, 0.5, 0.0, 1.0, 2.5, 0.0, 1.5…\n$ cholesterol <dbl> 95, 130, 220, 155, 120, 80, 40, 65, 85, 175, 40, 95, 125, …\n$ sodium      <dbl> 1110, 1580, 1920, 1940, 1980, 950, 680, 1040, 1040, 1290, …\n$ total_carb  <dbl> 44, 62, 63, 62, 81, 46, 33, 49, 35, 42, 38, 48, 48, 67, 31…\n$ fiber       <dbl> 3, 2, 3, 2, 4, 3, 2, 3, 2, 3, 2, 3, 3, 5, 2, 2, 3, 3, 5, 2…\n$ sugar       <dbl> 11, 18, 18, 18, 18, 9, 7, 6, 7, 10, 5, 11, 11, 11, 6, 3, 1…\n$ protein     <dbl> 37, 46, 70, 55, 46, 25, 15, 25, 25, 51, 15, 32, 42, 33, 13…\n$ vit_a       <dbl> 4, 6, 10, 6, 6, 10, 10, 0, 20, 20, 2, 10, 10, 10, 2, 4, 6,…\n$ vit_c       <dbl> 20, 20, 20, 25, 20, 2, 2, 4, 4, 6, 0, 10, 20, 15, 2, 6, 15…\n$ calcium     <dbl> 20, 20, 50, 20, 20, 15, 10, 2, 15, 20, 15, 35, 35, 35, 4, …\n$ salad       <chr> \"Other\", \"Other\", \"Other\", \"Other\", \"Other\", \"Other\", \"Oth…"
   },
   {
     "objectID": "report.html",
