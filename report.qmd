@@ -19,6 +19,6 @@ We will re-level the cholesterol variable to create a qualitative variable that 
 
 We will then create an interactive linear regression and an additive linear regression model to compare the relationship between number of calories and the cholesterol level and total carbohydrates. We will also facet wrap all of the graphs by restaurant to control the relationships of the variables.
 
-Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals
-
 **RESULTS**
+
+Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals
