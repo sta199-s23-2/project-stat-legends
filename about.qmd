@@ -8,6 +8,6 @@ This project was developed by **\[team name\]** For [STA 199: Introduction to Da
 
 -   Joshua Abbas is a freshman, double majoring in Statistics and Computer Science.
 -   Julia Gambino is a sophomore, majoring in Biology and minoring in Global Health on the pre-health track.
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
+-   Zach is a sophomore majoring in political science and pursuing the markets and management certificate. 
 -   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
 -   ...
