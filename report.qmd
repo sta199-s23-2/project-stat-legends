@@ -9,7 +9,9 @@ execute:
 
 **INTRODUCTION**
 
-Research Question: How is the number of calories affected by total carbohydrate content and cholesterol level?
+The fastfood_calories dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition.com website, but only data for entrees was collected rather than for all types of food offered at the restaurants. The data in this set describes entree items from different fast food restaurants, with quantitative observations summarizing the nutrition facts for these items under variables like calories, cholesterol, carbohydrates, etc.
+
+It has been found that fast food consumption poses a significant risk for poor diets featuring elevated calories and limited nutrients, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. Due to the staggering prevalence of these types of dietary conditions in the United States, we thought it'd be interesting to analyze this dataset from a dietary perspective. Therefore, we set out to investigate how the number of calories is affected by total carbohydrate content and cholesterol level of fast food entree items. We hypothesize that there will be a positive, linear relationship between calories and the level of cholesterol and total fat content of fast food entree items.This question is important because information pertaining to the relationship between the number of calories and "less healthy" nutrients can hep guide dietary decisions on a consumer level to help curb the incidence of these types of conditions.
 
 **METHODOLOGY:**
 
