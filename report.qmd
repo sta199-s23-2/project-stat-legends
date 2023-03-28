@@ -11,6 +11,6 @@ execute:
 
 Research Question: How is the number of calories effected by total carbohydrate content and cholesterol level?
 
-**METHODOLOGY**
+**METHODOLOGY:**
 
 **RESULTS**
