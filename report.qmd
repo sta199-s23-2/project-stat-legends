@@ -9,7 +9,7 @@ execute:
 
 **INTRODUCTION**
 
-Research Question: How is the number of calories effected by total carbohydrate content and cholesterol level?
+Research Question: How is the number of calories affected by total carbohydrate content and cholesterol level?
 
 **METHODOLOGY:**
 
