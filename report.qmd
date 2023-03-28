@@ -13,4 +13,8 @@ Research Question: How is the number of calories affected by total carbohydrate 
 
 **METHODOLOGY:**
 
+We will re-level the cholesterol variable to create a qualitative variable that describes whether the cholesterol is above or below recommended levels (which is 200mg if you are at risk of heart disease and 300mg if you are healthy).
+
+We will then create an interactive linear regression model to compare the relationship between number of calories and the cholesterol level and total carbohydrates. We will also create
+
 **RESULTS**
