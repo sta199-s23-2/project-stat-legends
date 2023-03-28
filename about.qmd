@@ -6,8 +6,8 @@ editor: visual
 
 This project was developed by **\[team name\]** For [STA 199: Introduction to Data Science](https://sta199-s23-2.github.io/) at Duke University. The team is comprised of the following team members.
 
--   Joshua Abbas: Freshman, double majoring in Statistics and Computer Science.
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
+-   Joshua Abbas is a freshman, double majoring in Statistics and Computer Science.
+-   Julia Gambino is a sophomore, majoring in Biology and minoring in Global Health on the pre-health track.
 -   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
 -   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
 -   ...
