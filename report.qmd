@@ -11,7 +11,7 @@ execute:
 
 The fastfood_calories dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition.com website, but only data for entrees was collected rather than for all types of food offered at the restaurants. The data in this set describes entree items from different fast food restaurants, with quantitative observations summarizing the nutrition facts for these items under variables like calories, cholesterol, carbohydrates, etc.
 
-It has been found that fast food consumption poses a significant risk for poor diets featuring elevated calories and limited nutrients, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. Due to the staggering prevalence of these types of dietary conditions in the United States, we thought it'd be interesting to analyze this dataset from a dietary perspective. Therefore, we set out to investigate how the number of calories is affected by total carbohydrate content and cholesterol level of fast food entree items. We hypothesize that there will be a positive, linear relationship between calories and the level of cholesterol and total fat content of fast food entree items.This question is important because information pertaining to the relationship between the number of calories and "less healthy" nutrients can hep guide dietary decisions on a consumer level to help curb the incidence of these types of conditions.
+It has been found that fast food consumption poses a significant risk for poor diets featuring elevated calories and limited nutrients, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. Due to the staggering prevalence of these types of dietary conditions in the United States, we thought it'd be interesting to analyze this dataset from a dietary perspective. Therefore, we set out to investigate how the number of calories is affected by total carbohydrate content and cholesterol level of fast food entree items. We hypothesize that there will be a positive, linear relationship between calories and the level of cholesterol and total carbs content of fast food entree items. This question is important because information pertaining to the relationship between the number of calories and "less healthy" nutrients can hep guide dietary decisions on a consumer level to help curb the incidence of these types of conditions.
 
 **METHODOLOGY:**
 
@@ -19,6 +19,57 @@ We will re-level the cholesterol variable to create a qualitative variable that 
 
 We will then create an interactive linear regression and an additive linear regression model to compare the relationship between number of calories and the cholesterol level and total carbohydrates. We will also facet wrap all of the graphs by restaurant to control the relationships of the variables.
 
+```{r}
+#| label: analyze_data
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(tidymodels)
+library(tidyverse)
+
+fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+#relationship between calories and cholesterol
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol, data = fastfood_calories) |>
+  tidy()
+
+fastfood_calories |>
+  ggplot(aes(y = calories, x = cholesterol)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~restaurant)
+
+#relationship between calories and total carb
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ total_carb, data = fastfood_calories) |>
+  tidy()
+
+fastfood_calories |>
+  ggplot(aes(y = calories, x = total_carb)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~restaurant)
+
+#additive model
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol + total_carb, data = fastfood_calories) |>
+  tidy()
+
+#interactive model
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol*total_carb, data = fastfood_calories) |>
+  tidy()
+
+```
+
 **RESULTS**
 
-Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals
+Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals.
+
+The linear regressions above show that there is a positive correlation between calories and total carbohydrates, and calories and cholesterol. This holds true across all the fast food restaurants listed, and seems not to be just a perception that the consumer has.
