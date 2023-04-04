@@ -61,10 +61,11 @@ linear_reg() |>
   tidy()
 
 #interactive model
-linear_reg() |>
+int_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ cholesterol*total_carb, data = fastfood_calories) |>
-  tidy()
+  fit(calories ~ cholesterol*total_carb, data = fastfood_calories)
+
+glance(int_model)$r.squared
 
 ```
 
@@ -73,3 +74,5 @@ linear_reg() |>
 Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals.
 
 The linear regressions above show that there is a positive correlation between calories and total carbohydrates, and calories and cholesterol. This holds true across all the fast food restaurants listed, and seems not to be just a perception that the consumer has.
+
+Also, the $R^2$ value of the interaction model shows that 88.7% of the change in calories is explained by the total carbohydrates and cholesterol level.
