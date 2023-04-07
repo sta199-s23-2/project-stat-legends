@@ -7,16 +7,18 @@ execute:
   echo: true
 ---
 
-**INTRODUCTION**
+**INTRODUCTION AND DATA:**
 
 Research Question: How is the number of calories affected by total carbohydrate content and cholesterol level?
 
+The data we are utilizing was not from a specific study consisting of samples and observations; this data set was curated by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a data set that only consists of entrees from eight different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.
+
 **METHODOLOGY:**
 
-We will re-level the cholesterol variable to create a qualitative variable that describes whether the cholesterol is above or below recommended levels (which is 200mg if you are at risk of heart disease and 300mg if you are healthy).
+First, we will re-level the cholesterol variable to create a qualitative variable that reveals whether the cholesterol is above or below recommended levels (200mg if you are at risk of heart disease and 300mg if you are healthy).
 
-We will then create an interactive linear regression and an additive linear regression model to compare the relationship between number of calories and the cholesterol level and total carbohydrates. We will also facet wrap all of the graphs by restaurant to control the relationships of the variables.
+We will then create an interactive linear regression and an additive linear regression model consisting of the new cholesterol variable, total carbohydrate content, and calories for each entree from a specific restaurant. There will be eight graphs, one for each restaurant. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories. We will also use the facet wrap function on all of the graphs by restaurants to control the relationships of the variables and simplify our graphs.
 
-**RESULTS**
+**RESULTS:**
 
-Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals
+Essentially, we will use all of the methods above to create and analyze statistical models, which will be used to more accurately understand if total carbohydrate content and cholesterol levels in different entrees from different restaurants affect the number of calories in each of these entrees. We will find out if both carbohydrate content and cholesterol levels affect the number of calories in entrees, but there are also possibilities where we find out only one of the variables (carbohydrate content or cholesterol) affects calorie quantities, or even none of these variables have a direct effect on calories in entrees.
