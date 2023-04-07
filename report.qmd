@@ -9,7 +9,9 @@ execute:
 
 **INTRODUCTION AND DATA:**
 
-Research Question: How is the number of calories affected by total carbohydrate content and cholesterol level?
+The fastfood_calories dataset was created on September 4, 2018. The original data curator aggregated the data from the fastfoodnutrition.com website, but only data for entrees was collected rather than for all types of food offered at the restaurants. The data in this set describes entree items from different fast food restaurants, with quantitative observations summarizing the nutrition facts for these items under variables like calories, cholesterol, carbohydrates, etc.
+
+It has been found that fast food consumption poses a significant risk for poor diets featuring elevated calories and limited nutrients, as well as weight gain, diabetes, and cardiovascular disease, among other health concerns. Due to the staggering prevalence of these types of dietary conditions in the United States, we thought it'd be interesting to analyze this dataset from a dietary perspective. Therefore, we set out to investigate how the number of calories is affected by total carbohydrate content and cholesterol level of fast food entree items. We hypothesize that there will be a positive, linear relationship between calories and the level of cholesterol and total carbs content of fast food entree items. This question is important because information pertaining to the relationship between the number of calories and "less healthy" nutrients can hep guide dietary decisions on a consumer level to help curb the incidence of these types of conditions.
 
 The data we are utilizing was not from a specific study consisting of samples and observations; this data set was curated on September 4th, 2018, by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a data set that only consists of entrees from eight different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.
 
@@ -21,6 +23,66 @@ First, we will re-level the cholesterol variable to create a qualitative variabl
 
 We will then create an interactive linear regression and an additive linear regression model consisting of the new cholesterol variable, total carbohydrate content, and calories for each entree from a specific restaurant. There will be eight graphs, one for each restaurant. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories. We will also use the facet wrap function on all of the graphs by restaurants to control the relationships of the variables and simplify our graphs.\
 
+<<<<<<< HEAD
 **RESULTS:**
 
 Essentially, we will use all of the methods above to create and analyze statistical models, which will be used to more accurately understand if total carbohydrate content and cholesterol levels in different entrees from different restaurants affect the number of calories in each of these entrees. We could find out if both carbohydrate content and cholesterol levels affect the number of calories in entrees, but there are also possibilities where we find out only one of the variables (carbohydrate content or cholesterol) affects calorie quantities, or even none of these variables have a direct effect on calories in entrees. However, after producing the linear regressions, we found a direct, positive correlation between total carbohydrate content and the number of calories, as well as cholesterol levels and the number of calories. This holds among all the fast-food restaurants in this data set, which seems not to be just a consumer perception. Additionally, the \$R\^2\$ value of the interaction model reveals that 88.7% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).
+=======
+```{r}
+#| label: analyze_data
+#| message: false
+#| warning: false
+
+library(ggplot2)
+library(tidymodels)
+library(tidyverse)
+
+fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+#relationship between calories and cholesterol
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol, data = fastfood_calories) |>
+  tidy()
+
+fastfood_calories |>
+  ggplot(aes(y = calories, x = cholesterol)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~restaurant)
+
+#relationship between calories and total carb
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ total_carb, data = fastfood_calories) |>
+  tidy()
+
+fastfood_calories |>
+  ggplot(aes(y = calories, x = total_carb)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  facet_wrap(~restaurant)
+
+#additive model
+linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol + total_carb, data = fastfood_calories) |>
+  tidy()
+
+#interactive model
+int_model <- linear_reg() |>
+  set_engine("lm") |>
+  fit(calories ~ cholesterol*total_carb, data = fastfood_calories)
+
+glance(int_model)$r.squared
+
+```
+
+**RESULTS**
+
+Essentially, we will use all of the methods above to conclude if total carbohydrate content and cholesterol levels in different foods from different restaurants have an affect on the number of calories in each of these meals.
+
+The linear regressions above show that there is a positive correlation between calories and total carbohydrates, and calories and cholesterol. This holds true across all the fast food restaurants listed, and seems not to be just a perception that the consumer has.
+
+Also, the $R^2$ value of the interaction model shows that 88.7% of the change in calories is explained by the total carbohydrates and cholesterol level.
+>>>>>>> 70f38f14f53b109232fe823fb85e4ad0beb24372
