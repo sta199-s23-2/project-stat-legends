@@ -30,17 +30,11 @@ library(tidyverse)
  
 fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
 
-library(ggplot2)
-library(tidymodels)
-library(tidyverse)
-
-fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
-
 #relationship between calories and cholesterol
-linear_reg() |>
+cal_chol_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ cholesterol, data = fastfood_calories) |>
-  tidy()
+  fit(calories ~ cholesterol, data = fastfood_calories) 
+tidy(cal_chol_model)
  
 fastfood_calories |>
   ggplot(aes(y = calories, x = cholesterol)) +
@@ -49,10 +43,10 @@ fastfood_calories |>
   facet_wrap(~restaurant)
 
 #relationship between calories and total carb
-linear_reg() |>
+cal_carb_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ total_carb, data = fastfood_calories) |>
-  tidy()
+  fit(calories ~ total_carb, data = fastfood_calories) 
+tidy(cal_carb_model)
 
 fastfood_calories |>
   ggplot(aes(y = calories, x = total_carb)) +
@@ -61,17 +55,21 @@ fastfood_calories |>
   facet_wrap(~restaurant)
 
 #additive model
-linear_reg() |>
+additive_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ cholesterol + total_carb, data = fastfood_calories) |>
-  tidy()
+  fit(calories ~ cholesterol + total_carb, data = fastfood_calories)
+tidy(additive_model)
 
 #interactive model
 int_model <- linear_reg() |>
   set_engine("lm") |>
   fit(calories ~ cholesterol*total_carb, data = fastfood_calories)
+tidy(int_model)
  
-glance(int_model)$r.squared
+glance(cal_chol_model)$AIC
+glance(cal_carb_model)$AIC
+glance(additive_model)$AIC
+glance(int_model)$AIC
  
 ```
 
