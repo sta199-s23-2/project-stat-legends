@@ -11,16 +11,16 @@ execute:
 
 The data we are utilizing was not from a specific study consisting of samples and observations; this data set was curated on September 4th, 2018, by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a data set that only consists of entrees from eight different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.
 
-Consistent fast food consumption, which normally consists of poor diets with elevated calories and limited nutrients, has been found to pose a significant risk for weight gain, diabetes, cardiovascular disease, and the list goes on. With this staggering prevalence of similar diets and illnesses (specifically in the United States, where over 36.2% of the population is obese), we thought it would be interesting and useful to analyse a data set from a dietary perspective. Therefore, we set out to investigate how total carbohydrate content and cholesterol level of entree items at eight fast-food restaurants. We hypothesize that there will be a direct, positive, linear relationship between calories and cholesterol level and total carbohydrate content in fast food entree items. This research question is valuable for individuals because information on the relationship between the number of calories and less healthy nutrients (carbohydrates and cholesterol) can help guide dietary restrictions at the consumer level to prevent the incidence of these types of unhealthy living conditions.
+Consistent fast food consumption, which normally consists of poor diets with elevated calories and limited nutrients, has been found to pose a significant risk for weight gain, diabetes, cardiovascular disease, and the list goes on. With this staggering prevalence of similar diets and illnesses (specifically in the United States, where over 36.2% of the population is obese), we thought it would be interesting and useful to analyse a data set from a dietary perspective. Therefore, we set out to investigate whether total carbohydrate content or cholesterol level is a better predictor of the amount of calories in food items at eight different fast-food restaurants. We hypothesize that there will be a direct, positive, linear relationship between calories and cholesterol level and total carbohydrate content in fast food entree items, and that these models will interact because foods high in carbohydrates generally also have high cholesterol levels. Between cholesterol and carbohydrates, we predict that cholesterol will be a better predictor of calories in fast food because \_\_\_ (add citation). This research question is valuable for individuals because information on the relationship between the number of calories and less healthy nutrients (carbohydrates and cholesterol) can help guide dietary restrictions at the consumer level to prevent the incidence of these types of unhealthy living conditions.
 
 **METHODOLOGY**
 
-First, we will re-level the cholesterol variable to create a qualitative variable that reveals whether the cholesterol is above or below recommended levels (200mg if you are at risk of heart disease and 300mg if you are healthy).
+First, we will re-level the cholesterol variable to create a qualitative variable that reveals whether the cholesterol is above or below recommended levels (200mg if you are at risk of heart disease and 300mg if you are healthy) (add citation).
 
-We will then create an interactive linear regression and an additive linear regression model consisting of the new cholesterol variable, total carbohydrate content, and calories for each entree from a specific restaurant. There will be eight graphs, one for each restaurant. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories. We will also use the facet wrap function on all of the graphs by restaurants to control the relationships of the variables and simplify our graphs.
+We will then create a both a simple linear regression for both cholesterol and carbohydrates' relationship with calories, and an interactive and additive linear regression model consisting of how the new cholesterol variable and total carbohydrate content effect each other to predict calories for each entree from a specific restaurant. There will be two graphs, each facet-wrapped by restaurant to make sure it is not a confounding variable and simplify our graphs. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories.
 
 ```{r}
-#| label: analyze_data
+#| label: load_data
 #| message: false
 #| warning: false
  
@@ -30,6 +30,15 @@ library(tidyverse)
  
 fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
 
+```
+
+```{r}
+#| label: analyze_data
+
+#relevel the cholestrol variable
+fastfood_calories <- fastfood_calories |> 
+  mutate(new_cholesterol = if_else(cholesterol >= 100, "High", "Low"))
+
 #relationship between calories and cholesterol
 cal_chol_model <- linear_reg() |>
   set_engine("lm") |>
@@ -37,7 +46,7 @@ cal_chol_model <- linear_reg() |>
 tidy(cal_chol_model)
  
 fastfood_calories |>
-  ggplot(aes(y = calories, x = cholesterol)) +
+  ggplot(aes(y = calories, x = new_cholesterol)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   facet_wrap(~restaurant)
@@ -57,13 +66,13 @@ fastfood_calories |>
 #additive model
 additive_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ cholesterol + total_carb, data = fastfood_calories)
+  fit(calories ~ new_cholesterol + total_carb, data = fastfood_calories)
 tidy(additive_model)
 
 #interactive model
 int_model <- linear_reg() |>
   set_engine("lm") |>
-  fit(calories ~ cholesterol*total_carb, data = fastfood_calories)
+  fit(calories ~ new_cholesterol*total_carb, data = fastfood_calories)
 tidy(int_model)
  
 glance(cal_chol_model)$AIC
