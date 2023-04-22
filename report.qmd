@@ -46,7 +46,7 @@ cal_chol_model <- linear_reg() |>
 tidy(cal_chol_model)
  
 fastfood_calories |>
-  ggplot(aes(y = calories, x = new_cholesterol)) +
+  ggplot(aes(y = calories, x = cholesterol)) +
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) +
   facet_wrap(~restaurant)
@@ -79,9 +79,10 @@ glance(cal_chol_model)$AIC
 glance(cal_carb_model)$AIC
 glance(additive_model)$AIC
 glance(int_model)$AIC
- 
+
+glance(additive_model)$r.squared
 ```
 
 **RESULTS**
 
-Essentially, we will use all of the methods above to create and analyze statistical models, which will be used to more accurately understand if total carbohydrate content and cholesterol levels in different entrees from different restaurants affect the number of calories in each of these entrees. We could find out if both carbohydrate content and cholesterol levels affect the number of calories in entrees, but there are also possibilities where we find out only one of the variables (carbohydrate content or cholesterol) affects calorie quantities, or even none of these variables have a direct effect on calories in entrees. However, after producing the linear regressions, we found a direct, positive correlation between total carbohydrate content and the number of calories, as well as cholesterol levels and the number of calories. This holds among all the fast-food restaurants in this data set, which seems not to be just a consumer perception. Additionally, the $R^2$ value of the interaction model reveals that 88.7% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).
+After producing the linear regressions and plots, we found a direct, positive correlation between  cholesterol content and the number of calories, as well as total carbohydrate levels and the number of calories. This holds among all the fast-food restaurants in this data set, which then seems that this is not just a consumer perception. Furthermore, after looking at the AIC values for each of our models, we found the linear additive model with cholesterol and total carbohydrates as predictors to be the best of the four models with the lowest AIC. This is the equation for that additive model: $\widehat{calories} = 447 - 308*new_cholesterollow + 7.10*total_carb$ We can say that holding all other variables constant, for a one mg increase in total carbohydrates, we estimate a 7.10 kcal increase in mean calories. And, holding all other variables constant, we estimate the mean calories of food with low cholesterol to be 308 kcal less than food with high cholesterol. The $R^2$ value of this interaction model reveals that ~70% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).
