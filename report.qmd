@@ -6,19 +6,6 @@ editor: visual
 execute:
   echo: true
 ---
- 
-**INTRODUCTION AND DATA**
- 
-The data we are utilizing was not from a specific study consisting of samples and observations; this data set was curated on September 4th, 2018, by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a data set that only consists of entrees from eight different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.
- 
-Consistent fast food consumption, which normally consists of poor diets with elevated calories and limited nutrients, has been found to pose a significant risk for weight gain, diabetes, cardiovascular disease, and the list goes on. With this staggering prevalence of similar diets and illnesses (specifically in the United States, where over 36.2% of the population is obese), we thought it would be interesting and useful to analyse a data set from a dietary perspective. Therefore, we set out to investigate how total carbohydrate content and cholesterol level of entree items at eight fast-food restaurants. We hypothesize that there will be a direct, positive, linear relationship between calories and cholesterol level and total carbohydrate content in fast food entree items. This research question is valuable for individuals because information on the relationship between the number of calories and less healthy nutrients (carbohydrates and cholesterol) can help guide dietary restrictions at the consumer level to prevent the incidence of these types of unhealthy living conditions.
- 
-**METHODOLOGY**
- 
-First, we will re-level the cholesterol variable to create a qualitative variable that reveals whether the cholesterol is above or below recommended levels (200mg if you are at risk of heart disease and 300mg if you are healthy).
- 
-We will then create an interactive linear regression and an additive linear regression model consisting of the new cholesterol variable, total carbohydrate content, and calories for each entree from a specific restaurant. There will be eight graphs, one for each restaurant. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories. We will also use the facet wrap function on all of the graphs by restaurants to control the relationships of the variables and simplify our graphs.
- 
 
 **INTRODUCTION AND DATA**
 
@@ -87,14 +74,10 @@ int_model <- linear_reg() |>
 glance(int_model)$r.squared
  
 ```
- 
+
 **RESULTS**
- 
+
 Essentially, we will use all of the methods above to create and analyze statistical models, which will be used to more accurately understand if total carbohydrate content and cholesterol levels in different entrees from different restaurants affect the number of calories in each of these entrees. We could find out if both carbohydrate content and cholesterol levels affect the number of calories in entrees, but there are also possibilities where we find out only one of the variables (carbohydrate content or cholesterol) affects calorie quantities, or even none of these variables have a direct effect on calories in entrees. However, after producing the linear regressions, we found a direct, positive correlation between total carbohydrate content and the number of calories, as well as cholesterol levels and the number of calories. This holds among all the fast-food restaurants in this data set, which seems not to be just a consumer perception. Additionally, the $R^2$ value of the interaction model reveals that 88.7% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).
-
-glance(int_model)$r.squared
-
-```
 
 **RESULTS**
 
