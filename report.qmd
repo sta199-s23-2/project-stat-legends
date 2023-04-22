@@ -35,7 +35,7 @@ fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/
 ```{r}
 #| label: analyze_data
 
-#relevel the cholestrol variable
+#relevel the cholesterol variable
 fastfood_calories <- fastfood_calories |> 
   mutate(new_cholesterol = if_else(cholesterol >= 100, "High", "Low"))
 
