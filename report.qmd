@@ -4,7 +4,7 @@ subtitle: "Report"
 format: html
 editor: visual
 execute:
-  echo: true
+  echo: false
 ---
 
 **INTRODUCTION AND DATA**
@@ -40,7 +40,11 @@ fastfood_calories = read_csv('https://raw.githubusercontent.com/rfordatascience/
 
 ```{r}
 #| label: analyze_data
+<<<<<<< HEAD
 #| #| message: false
+=======
+#| message: false
+>>>>>>> 11349bd5fb7b86e033718209587dd28c425d05ab
 #| warning: false
 
 #relevel the cholesterol variable
