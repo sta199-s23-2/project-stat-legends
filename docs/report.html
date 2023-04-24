@@ -20,6 +20,69 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -123,6 +186,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p><strong>INTRODUCTION AND DATA</strong></p>
+<<<<<<< HEAD
 <p>The data we are utilizing focuses on the nutrition facts of different fast food items across 8 restaurants. It was not from a specific study consisting of samples and observations, but was curated on September 4th, 2018 by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a data set that only consists of entrees from eight different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.</p>
 <p>Consistent fast food consumption, which normally consists of poor diets with elevated calories and limited nutrients, has been found to pose a significant risk for weight gain, diabetes, cardiovascular disease, and the list goes on. With this staggering prevalence of similar diets and illnesses (specifically in the United States, where over 36.2% of the population is obese), we thought it would be interesting and useful to analyse a data set from a dietary perspective. Therefore, we set out to investigate whether total carbohydrate content or cholesterol level is a better predictor of the amount of calories in food items at eight different fast-food restaurants. We hypothesize that there will be a direct, positive, linear relationship between calories and cholesterol level and total carbohydrate content in fast food entree items, and that these models will interact because foods high in carbohydrates generally also have high cholesterol levels. Between cholesterol and carbohydrates, we predict that carbohydrates will be a better predictor of calories in fast food (1). This research question is valuable for individuals because information on the relationship between the number of calories and less healthy nutrients (carbohydrates and cholesterol) can help guide dietary restrictions at the consumer level to prevent the incidence of these types of unhealthy living conditions.</p>
 <p><strong>LITERATURE REVIEW</strong></p>
@@ -135,6 +199,33 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div class="cell">
+=======
+<p>The data we are utilizing focuses on the nutrition facts of different fast food items across 8 restaurants. It was not from a specific study consisting of samples and observations, but was curated on September 4th, 2018 by technologists and statisticians from the fast food nutrition organization, which aims to provide consumers with insight into their fast food options from various restaurants. To make our research question more specific, we are using a dataset that only consists of entrees from 8 different restaurants, with specific quantitative variables such as calories, total carbohydrates, and cholesterol listed for every entree at these restaurants.</p>
+<p>Consistent fast food consumption, which normally consists of poor diets with elevated calories and limited nutrients, has been found to pose a significant risk for weight gain, diabetes, cardiovascular disease, and the list goes on. With this staggering prevalence of similar diets and illnesses (specifically in the United States, where over 41.9% of the population is obese), we thought it would be interesting and useful to analyze a data set from a dietary perspective (1). Therefore, we set out to investigate whether total carbohydrate content or cholesterol level is a better predictor of the amount of calories in food items at 8 different fast-food restaurants. We hypothesize that there will be a direct, positive, linear relationship between calories and cholesterol level and total carbohydrate content in fast food entree items, and that these models will interact because foods high in carbohydrates generally also have high cholesterol levels. Between cholesterol and carbohydrates, we predict that carbohydrates will be a better predictor of calories in fast food (2). This research question is valuable for individuals because information on the relationship between the number of calories and less healthy nutrients (carbohydrates and cholesterol) can help guide dietary restrictions at the consumer level to prevent the incidence of these types of unhealthy living conditions.</p>
+<p><strong>LITERATURE REVIEW</strong></p>
+<p>The correlation between fast food consumption and subsequent health outcomes (including those like obesity and related heart conditions) is an urgent issue in the United States. It has been found that fast food consumption poses a significant risk for poor diets featuring elevated calories and fats and limited nutrients. This mix of poor nutrition and high caloric level can lead to weight gain, diabetes, and cardiovascular disease, among other health concerns. This specific article looks at a comprehensive view of American nutritional and caloric intake from fast food restaurants and how that relates to the individual’s weight. The article talks about the high caloric content of many fast food restaurants and how many of them provide poor nutrition and high fat and sodium content (2). The findings of this article reinforce the need to analyze fast food consumption and its impact on the prevalence of these health outcomes across the country.</p>
+<p>Our research question responds to the findings of this article because while the literature article takes a wide lens view of nutritional value of fast food items, our research looks at specific correlations to help guide food choices. The results from our research question can be used to guide dietary recommendations to promote a healthier diet and decrease the risk of these negative health outcomes.</p>
+<p><strong>METHODOLOGY</strong></p>
+<p>First, we will re-level the cholesterol variable to create a qualitative variable that reveals whether cholesterol is above or below recommended levels (200mg if you are at risk of heart disease and 300mg if you are healthy) (3). We chose our threshold for high cholesterol as 100 mg or above because half of the daily intake of cholesterol in one meal is more than you need, if you are averaging 3 meals per day.</p>
+<p>We will then create simple linear regressions for both cholesterol and carbohydrates’ relationship with calories, and both interactive and additive linear regression models consisting of how the new cholesterol variable and total carbohydrate content affect each other to predict calories for each entree from a specific restaurant. There will be two graphs, each facet-wrapped by restaurant to make sure it is not a confounding variable. Creating these models will allow us to make inferences from our data (we cannot make predictions, as our research question does not involve future occurrences), which will help us answer our research question regarding the effect of cholesterol levels and total carbohydrates on the number of calories.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidymodels)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>fastfood_calories <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#relevel the cholesterol variable</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>fastfood_calories <span class="ot">&lt;-</span> fastfood_calories <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">new_cholesterol =</span> <span class="fu">if_else</span>(cholesterol <span class="sc">&gt;=</span> <span class="dv">100</span>, <span class="st">"High"</span>, <span class="st">"Low"</span>))</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#relationship between calories and cholesterol</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>cal_chol_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(calories <span class="sc">~</span> new_cholesterol, <span class="at">data =</span> fastfood_calories) </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(cal_chol_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term               estimate std.error statistic   p.value
@@ -142,9 +233,28 @@ ul.task-list li input[type="checkbox"] {
 1 (Intercept)            836.      21.9      38.1 7.70e-152
 2 new_cholesterolLow    -390.      24.8     -15.7 7.39e- 46</code></pre>
 </div>
+<<<<<<< HEAD
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/analyze_data-1.png" class="img-fluid" width="672"></p>
 </div>
+=======
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>fastfood_calories <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> calories, <span class="at">x =</span> cholesterol)) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>restaurant) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Calories vs. Total Cholesterol by Restaurant"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Total Cholesterol per food item (mg)"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Total Calories per food item (kcal)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/analyze_data-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#relationship between calories and total carb</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>cal_carb_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(calories <span class="sc">~</span> total_carb, <span class="at">data =</span> fastfood_calories) </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(cal_carb_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   term        estimate std.error statistic  p.value
@@ -152,9 +262,28 @@ ul.task-list li input[type="checkbox"] {
 1 (Intercept)   162.      18.3        8.84 1.57e-17
 2 total_carb      8.09     0.352     23.0  4.96e-81</code></pre>
 </div>
+<<<<<<< HEAD
 <div class="cell-output-display">
 <p><img src="report_files/figure-html/analyze_data-2.png" class="img-fluid" width="672"></p>
 </div>
+=======
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>fastfood_calories <span class="sc">|&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> calories, <span class="at">x =</span> total_carb)) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>restaurant)  <span class="sc">+</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Calories vs. Total Carbs by Restaurant"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Total Carbohydrates per food item (g)"</span>,</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Total Calories per food item (kcal)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="report_files/figure-html/analyze_data-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#additive model</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>additive_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(calories <span class="sc">~</span> new_cholesterol <span class="sc">+</span> total_carb, <span class="at">data =</span> fastfood_calories)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(additive_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term               estimate std.error statistic  p.value
@@ -163,6 +292,14 @@ ul.task-list li input[type="checkbox"] {
 2 new_cholesterolLow  -308.      16.8       -18.3 4.56e-58
 3 total_carb             7.10     0.279      25.5 3.76e-93</code></pre>
 </div>
+<<<<<<< HEAD
+=======
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#interactive model</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>int_model <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(calories <span class="sc">~</span> new_cholesterol<span class="sc">*</span>total_carb, <span class="at">data =</span> fastfood_calories)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">tidy</span>(int_model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   term                          estimate std.error statistic  p.value
@@ -172,6 +309,7 @@ ul.task-list li input[type="checkbox"] {
 3 total_carb                       6.85      0.558    12.3   1.35e-30
 4 new_cholesterolLow:total_carb    0.333     0.644     0.517 6.05e- 1</code></pre>
 </div>
+<<<<<<< HEAD
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 7076.215</code></pre>
 </div>
@@ -184,11 +322,31 @@ ul.task-list li input[type="checkbox"] {
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 6657.969</code></pre>
 </div>
+=======
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(cal_chol_model)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7076.215</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(cal_carb_model)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6914.045</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(additive_model)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6656.239</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(int_model)<span class="sc">$</span>AIC</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6657.969</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(additive_model)<span class="sc">$</span>r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.7028852</code></pre>
 </div>
 </div>
 <p><strong>RESULTS</strong></p>
+<<<<<<< HEAD
 <p>After producing the linear regressions and plots, we found a direct, positive correlation between cholesterol content and the number of calories, as well as total carbohydrate levels and the number of calories. This holds among all the fast-food restaurants in this data set, which then seems that this is not just a consumer perception. Furthermore, after looking at the AIC values for each of our models, we found the linear additive model with cholesterol and total carbohydrates as predictors to be the best of the four models with the lowest AIC. This is the equation for that additive model: <span class="math inline">\(\widehat{calories} = 447 - 308*new\_cholesterolLow + 7.10*total\_carb\)</span>. We can say that holding all other variables constant, for a one gram increase in total carbohydrates, we estimate a 7.10 kcal increase in mean calories. And, holding all other variables constant, we estimate the mean calories of food with low cholesterol to be 308 kcal less than food with high cholesterol. The <span class="math inline">\(R^2\)</span> value of this interaction model reveals that ~70% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).</p>
 <p><strong>DISCUSSION</strong></p>
 <p>In response to our question of whether total carbohydrate content or cholesterol level is a better predictor of the amount of calories in food items at eight different fast-food restaurants, we found that cholesterol is a better predictor of total calories, with this model having a lower AIC than the carbohydrates model (6830.847 vs.&nbsp;6914.045). However, both the additive and interaction model with these two predictors had lower AICs. Our models were somewhat limited in that we only explored two variables as predictors. So, in the future, we could further explore how cholesterol levels can be a predictor of calories and create models that have this variable interact with others beside total carbohydrates, such as sugar, to see if there are even better models for prediction caloric content. Additionally, this dataset only included fast food restaurants, so it might be interesting in the future to conduct research with a wider reaching dataset that includes healthier food options as well.</p>
@@ -197,6 +355,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Fryar CD, Ervin RB. (2013). Caloric intake from fast food among adults: United States, 2007-2010. NCHS data brief, no 114. Hyattsville, MD: National Center for Health Statistics. Retrieved April 23, 2023, from https://www.cdc.gov/nchs/products/databriefs/db114.htm</li>
 <li>UCSF Health. (2023). Cholesterol content of foods. Retrieved April 23, 2023, from https://www.ucsfhealth.org/education/cholesterol-content-of-foods#:~:text=If%20you%20have%20risk%20factors,than%20300%20milligrams%20a%20day.</li>
 </ol>
+=======
+<p>After producing the linear regressions and plots, we found a direct, positive correlation between cholesterol content and the number of calories, as well as total carbohydrate levels and the number of calories. This holds true among all the fast-food restaurants in this dataset, which reflects that this is not just a consumer perception. Furthermore, after looking at the AIC values for each of our models, we found the linear additive model with cholesterol and total carbohydrates as predictors to be the best of the four models with the lowest AIC. This is the equation for that additive model: <span class="math inline">\(\widehat{calories} = 447 - 308*new\_cholesterolLow + 7.10*total\_carb\)</span>. We can say that holding all other variables constant, for a one gram increase in total carbohydrates, we estimate a 7.10 kcal increase in mean calories. And, holding all other variables constant, we estimate the mean calories of food with low cholesterol to be 308 kcal less than food with high cholesterol. The <span class="math inline">\(R^2\)</span> value of this interaction model reveals that ~70% of the change in the response variable (calories) is explained by the explanatory variables (total carbohydrate content and cholesterol level).</p>
+<p><strong>DISCUSSION</strong></p>
+<p>In response to our question of whether total carbohydrate content or cholesterol level is a better predictor of the amount of calories in food items at 8 different fast-food restaurants, we found that cholesterol is a better predictor of total calories, with this model having a lower AIC than the carbohydrates model (6830.847 vs.&nbsp;6914.045, resptively). However, both the additive and interaction models with these two predictors had lower AICs. Our models were somewhat limited in that we only explored two variables as predictors. So, in the future, we could further explore how cholesterol levels can be a predictor of calories and create models that have this variable interact with others beside total carbohydrates, such as sugar, to see if there are even better models for prediction caloric content. Additionally, this dataset only included fast food restaurants, so it might be interesting in the future to conduct research with a wider reaching dataset that includes healthier food options as well.</p>
+<p><strong>SOURCES</strong> 1. Centers for Disease Control. (2022). Adult obesity facts. Retrieved April 23, 2023, from https://www.cdc.gov/obesity/data/adult.html 2. Fryar CD, Ervin RB. (2013). Caloric intake from fast food among adults: United States, 2007-2010. NCHS data brief, no 114. Hyattsville, MD: National Center for Health Statistics. Retrieved April 23, 2023, from https://www.cdc.gov/nchs/products/databriefs/db114.htm 3. UCSF Health. (2023). Cholesterol content of foods. Retrieved April 23, 2023, from https://www.ucsfhealth.org/education/cholesterol-content-of-foods#:~:text=If%20you%20have%20risk%20factors,than%20300%20milligrams%20a%20day.</p>
+>>>>>>> b1fb06af6a300b2145f9ad70aef0a009cdaaba95
 
 
 
