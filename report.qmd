@@ -106,10 +106,5 @@ In response to our question of whether total carbohydrate content or cholesterol
 
 **SOURCES**
 
-1.  Fryar CD, Ervin RB. Caloric intake from fast food among adults: United States, 2007-2010. NCHS data brief, no 114. Hyattsville, MD: National Center for Health Statistics. 2013.
-
-```{=html}
-<!-- -->
-```
-2.  https://www.ucsfhealth.org/education/cholesterol-content-of-foods#:\~:text=If%20you%20have%20risk%20factors,than%20300%20milligrams%20a%20day.
-3.  https://www.cdc.gov/nchs/products/databriefs/db114.htm
+1.  Fryar CD, Ervin RB. (2013). Caloric intake from fast food among adults: United States, 2007-2010. NCHS data brief, no 114. Hyattsville, MD: National Center for Health Statistics. Retrieved April 23, 2023, from  https://www.cdc.gov/nchs/products/databriefs/db114.htm
+2. UCSF Health. (2023). Cholesterol content of foods. Retrieved April 23, 2023, from https://www.ucsfhealth.org/education/cholesterol-content-of-foods#:\~:text=If%20you%20have%20risk%20factors,than%20300%20milligrams%20a%20day.
